@@ -1,0 +1,2 @@
+export const REQUESTING = "REQUESTING";
+export const DONE_REQUESTING = "DONE_REQUESTING";
