@@ -1437,6 +1437,17 @@
   dependencies:
     "@babel/runtime" "^7.4.4"
 
+"@material-ui/lab@^4.0.0-alpha.60":
+  version "4.0.0-alpha.60"
+  resolved "https://registry.yarnpkg.com/@material-ui/lab/-/lab-4.0.0-alpha.60.tgz#5ad203aed5a8569b0f1753945a21a05efa2234d2"
+  integrity sha512-fadlYsPJF+0fx2lRuyqAuJj7hAS1tLDdIEEdov5jlrpb5pp4b+mRDUqQTUxi4inRZHS1bEXpU8QWUhO6xX88aA==
+  dependencies:
+    "@babel/runtime" "^7.4.4"
+    "@material-ui/utils" "^4.11.2"
+    clsx "^1.0.4"
+    prop-types "^15.7.2"
+    react-is "^16.8.0 || ^17.0.0"
+
 "@material-ui/styles@^4.11.4":
   version "4.11.4"
   resolved "https://registry.yarnpkg.com/@material-ui/styles/-/styles-4.11.4.tgz#eb9dfccfcc2d208243d986457dff025497afa00d"
@@ -2291,6 +2302,11 @@ acorn@^7.1.0, acorn@^7.1.1, acorn@^7.4.0:
   version "7.4.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
   integrity sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==
+
+actioncable@^5.2.6:
+  version "5.2.6"
+  resolved "https://registry.yarnpkg.com/actioncable/-/actioncable-5.2.6.tgz#cea30647183524f3bae8c2a78fa6ecd6d4dbc70c"
+  integrity sha512-ofLHm57nN24zghkl+tQe6IVrZeSJ655lNLQjNQJvtQkeTDqlF30McuMB4o9DqpxdHgW/w0RNWaAQHB6VPlleNQ==
 
 address@1.1.2, address@^1.0.1:
   version "1.1.2"
