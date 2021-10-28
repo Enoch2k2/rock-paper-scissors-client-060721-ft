@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { getCurrentUser } from './actions/sessions';
 import Errors from './components/errors/Errors';
-// import Navbar from './components/nav/Navbar';
+import Navbar from './components/nav/Navbar';
 import Login from './components/sessions/Login';
 import Signup from './components/sessions/Signup';
 import Home from './components/static/Home';
