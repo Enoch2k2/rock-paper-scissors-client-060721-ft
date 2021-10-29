@@ -3,7 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';;
+import { useSelector } from 'react-redux';
+import UserCard from './UserCard';
+;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,20 +36,14 @@ function ListItemLink(props) {
 
 const UserList = () => {
   const classes = useStyles();
+  const users = useSelector(state => state.sessions.users);
 
+  const userCards = users.map((user) => <UserCard user={ user } key={ user.id } />)
   return (
     <div className={classes.root}>
       <Box borderRadius="borderRadius" {...defaultProps}>
         <List component="nav" aria-label="secondary mailbox folders">
-          <ListItem className={ classes.blueBackground }>
-            <ListItemText primary="Online Users" className={classes.onlineUserText} />
-          </ListItem>
-          <ListItem button>
-            <ListItemText primary="Bob" />
-          </ListItem>
-          <ListItemLink href="#simple-list">
-            <ListItemText primary="Sarah" />
-          </ListItemLink>
+          { userCards }
         </List>
       </Box>
     </div>
