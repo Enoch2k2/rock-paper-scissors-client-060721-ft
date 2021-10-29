@@ -26,9 +26,14 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const loggedIn = useSelector(state => state.sessions.loggedIn);
+  const currentUser = useSelector(state => state.sessions.currentUser);
+  const subscriptions = useSelector(state => state.subscriptions)
 
   const handleLogout = () => {
+    subscriptions.users.perform("offline", { user_id: currentUser.id });
     dispatch(logout());
+    // update user to show offline
+    // remove the active subscription of users
     history.push("/")
   }
 

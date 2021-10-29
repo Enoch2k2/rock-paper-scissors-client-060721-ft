@@ -5,7 +5,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import { useSelector } from 'react-redux';
 import UserCard from './UserCard';
-;
+import ListItemText from '@material-ui/core/ListItemText';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,11 +29,6 @@ const defaultProps = {
   border: 1
 };
 
-function ListItemLink(props) {
-  return <ListItem button component="a" {...props} />;
-}
-
-
 const UserList = () => {
   const classes = useStyles();
   const users = useSelector(state => state.sessions.users);
@@ -43,6 +38,9 @@ const UserList = () => {
     <div className={classes.root}>
       <Box borderRadius="borderRadius" {...defaultProps}>
         <List component="nav" aria-label="secondary mailbox folders">
+          <ListItem className={ classes.blueBackground }>
+            <ListItemText primary="Online Users" className={ classes.onlineUserText } />
+          </ListItem>
           { userCards }
         </List>
       </Box>
