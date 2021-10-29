@@ -37,15 +37,16 @@ const Navbar = () => {
     history.push("/")
   }
 
-  const loggedOutLinks = (
+  const loggedOutLinks = () => (
     <>
       <Button component={ NavLink } color="inherit" to="/login">Login</Button>
       <Button component={ NavLink } color="inherit" to="/signup">Signup</Button>
     </>
   )
 
-  const loggedInLinks = (
+  const loggedInLinks = () => (
     <>
+      <Button color="inherit">{ currentUser ? currentUser.first_name[0] + currentUser.last_name[0] : null }</Button>
       <Button color="inherit" onClick={ () => handleLogout() }>Logout</Button>
     </>
   )
@@ -57,7 +58,7 @@ const Navbar = () => {
           <Typography variant="h6" className={classes.title}>
             <Button component={ NavLink } color="inherit" to="/">Flatiron Rock Paper Scissors</Button>
           </Typography>
-          { loggedIn ? loggedInLinks : loggedOutLinks }
+          { loggedIn ? loggedInLinks() : loggedOutLinks() }
         </Toolbar>
       </AppBar>
     </div>

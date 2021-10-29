@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import List from '@material-ui/core/List';
@@ -32,8 +32,13 @@ const defaultProps = {
 const UserList = () => {
   const classes = useStyles();
   const users = useSelector(state => state.sessions.users);
+  const [challenger, setChallenger] = useState({});
 
-  const userCards = users.map((user) => <UserCard user={ user } key={ user.id } />)
+  const handleChallenger = (user) => {
+    setChallenger(user);
+  }
+
+  const userCards = users.map((user) => <UserCard user={ user } handleChallenger={ handleChallenger } challenging={ challenger.id === user.id } key={ user.id } />)
   return (
     <div className={classes.root}>
       <Box borderRadius="borderRadius" {...defaultProps}>

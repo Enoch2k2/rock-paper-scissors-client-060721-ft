@@ -1,5 +1,5 @@
-// export const BASE_URL = 'http://localhost:3001/api/v1'
-export const BASE_URL = 'https://rps-api-060721-ft.herokuapp.com/api/v1'
+export const BASE_URL = 'http://localhost:3001/api/v1'
+// export const BASE_URL = 'https://rps-api-060721-ft.herokuapp.com/api/v1'
 export const REQUESTING = "REQUESTING";
 export const DONE_REQUESTING = "DONE_REQUESTING";
 export const LOGIN_USER = "LOGIN_USER";
